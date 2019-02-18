@@ -14,6 +14,13 @@ public class HelloWorldHandler {
 
         return  ServerResponse.ok()
             .contentType(MediaType.TEXT_PLAIN)
-            .body(BodyInserters.fromObject("Here I go with Spring WebFlux Annotation way :)"));
+            .body(BodyInserters.fromObject("Here I go with Spring WebFlux Functional way 1 :)"));
     }
+    public Mono<ServerResponse> hello1(ServerRequest serverRequest){
+
+        return  ServerResponse.ok()
+            .contentType(MediaType.TEXT_PLAIN)
+            .body(BodyInserters.fromObject("Here I go with Spring WebFlux functional way 2 :)"));
+    }
+
 }

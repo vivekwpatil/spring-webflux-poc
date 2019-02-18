@@ -15,6 +15,9 @@ public class HelloWorldWebClient {
         .exchange();
 
     public String getResult() {
-        return ">> result = " + result.flatMap(res -> res.bodyToMono(String.class)).block();
+
+        return ">> result = " + result.flatMap(
+            res -> res.bodyToMono(String.class))
+            .block();
     }
 }
